@@ -1,6 +1,5 @@
 package com.hbase;
 
-
 import java.util.List;
 
 import org.apache.flume.Event;
