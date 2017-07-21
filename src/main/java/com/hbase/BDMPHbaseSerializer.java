@@ -20,7 +20,6 @@ public class BDMPHbaseSerializer implements HbaseEventSerializer{
     private KeyType keyType;
     private byte[] payload;
     private String delimit;
-    private byte[] currentRowKey;
 
     public BDMPHbaseSerializer(){
 
@@ -86,7 +85,9 @@ public class BDMPHbaseSerializer implements HbaseEventSerializer{
                     //rowKey = currentRowKey;
                 }
                 Put put = new Put(rowKey);
-                put.add(cf, plCol, payload);
+                //removed the depricated method
+                put.addColumn(cf,plCol,payload);
+                //put.add(cf, plCol, payload);
                 actions.add(put);
             } catch (Exception e){
                 throw new FlumeException("Could not get row key!", e);
@@ -120,6 +121,6 @@ public class BDMPHbaseSerializer implements HbaseEventSerializer{
         UUID,
         RANDOM,
         TS,
-        TSNANO;
+        TSNANO
     }
 }
