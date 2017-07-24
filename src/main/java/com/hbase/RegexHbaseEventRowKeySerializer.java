@@ -119,6 +119,7 @@ public class RegexHbaseEventRowKeySerializer implements HbaseEventSerializer {
             }
         }
         actions.add(put);
+        logger.info("actions : " + actions.toString());
         return actions;
     }
 
