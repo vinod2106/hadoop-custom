@@ -72,15 +72,21 @@
             <scope>test</scope>
         </dependency>
 
-        <dependency>
+         <dependency>
             <groupId>org.apache.hbase</groupId>
             <artifactId>hbase-client</artifactId>
             <version>${hbase.version}</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
+            <artifactId>flume-ng-hbase-sink</artifactId>
+            <groupId>org.apache.flume.flume-ng-sinks</groupId>
+            <version>1.6.0-cdh5.7.6</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
             <groupId>org.apache.hadoop</groupId>
-            <artifactId>hadoop-client</artifactId>
+            <artifactId>hadoop-common</artifactId>
             <version>${hadoop.version}</version>
             <scope>provided</scope>
         </dependency>
@@ -102,11 +108,11 @@
             <version>${flume.version}</version>
             <scope>provided</scope>
         </dependency>
-        <dependency>
+   <!--     <dependency>
             <groupId>org.apache.flume</groupId>
             <artifactId>flume-ng-sdk</artifactId>
             <version>${flume.version}</version>
             <scope>provided</scope>
-        </dependency>
+        </dependency>-->
          </dependencies>
 </project>

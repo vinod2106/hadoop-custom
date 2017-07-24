@@ -10,6 +10,8 @@ import org.apache.flume.conf.ComponentConfiguration;
 import org.apache.hadoop.hbase.client.Increment;
 import org.apache.hadoop.hbase.client.Put;
 import org.apache.hadoop.hbase.client.Row;
+import org.apache.flume.sink.hbase.HbaseEventSerializer;
+
 
 import com.google.common.base.Charsets;
 
