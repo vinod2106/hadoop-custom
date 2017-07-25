@@ -1,7 +1,6 @@
 package com.hbase;
 
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -26,18 +25,18 @@ public class RegexHbaseEventRowKeySerializer implements HbaseEventSerializer {
 
     // Config vars
     /** Regular expression used to parse groups from event data. */
-    public static final String REGEX_CONFIG = "regex";
+    private static final String REGEX_CONFIG = "regex";
 
     /** Whether to ignore case when performing regex matches. */
-    public static final String IGNORE_CASE_CONFIG = "regexIgnoreCase";
-    public static final boolean INGORE_CASE_DEFAULT = false;
+    private static final String IGNORE_CASE_CONFIG = "regexIgnoreCase";
+    private static final boolean INGORE_CASE_DEFAULT = false;
 
     /** Comma separated list of column names to place matching groups in. */
-    public static final String COL_NAME_CONFIG = "colNames";
+    private static final String COL_NAME_CONFIG = "colNames";
     /** Index row key in event body */
-    public static final String ROW_KEY_INDEX_CONFIG = "rowKeyIndex";
+    private static final String ROW_KEY_INDEX_CONFIG = "rowKeyIndex";
     /** Placeholder in colNames for row key */
-    public static final String ROW_KEY_NAME = "ROW_KEY";
+    private static final String ROW_KEY_NAME = "ROW_KEY";
 
     protected byte[] columnFamily;
     private byte[] payload;

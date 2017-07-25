@@ -1,7 +1,5 @@
 package com.hbase;
 
-import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -19,22 +17,23 @@ import org.slf4j.LoggerFactory;
 
 import com.google.common.base.Charsets;
 import com.google.common.collect.Lists;
+
 public class BDMPHbaseEventRowKeySerializer implements HbaseEventSerializer {
     private static final Logger logger = LoggerFactory.getLogger(RegexHbaseEventRowKeySerializer.class);
 
     // Config vars
     /** Regular expression used to parse groups from event data. */
-    public static final String REGEX_CONFIG = "regex";
+    private static final String REGEX_CONFIG = "regex";
 
     /** Whether to ignore case when performing regex matches. */
-    public static final String IGNORE_CASE_CONFIG = "regexIgnoreCase";
-    public static final boolean INGORE_CASE_DEFAULT = false;
+    private static final String IGNORE_CASE_CONFIG = "regexIgnoreCase";
+    private static final boolean INGORE_CASE_DEFAULT = false;
 
     /** Comma separated list of column names to place matching groups in. */
-    public static final String COL_NAME_CONFIG = "colName";
+    private static final String COL_NAME_CONFIG = "colName";
 
     /** Placeholder in colNames for row key */
-    public static final String ROW_KEY_NAME = "ROW_KEY";
+    private static final String ROW_KEY_NAME = "ROW_KEY";
 
     protected byte[] columnFamily;
     private byte[] payload;
