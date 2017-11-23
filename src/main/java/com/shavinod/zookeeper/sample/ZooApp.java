@@ -23,7 +23,7 @@ public class ZooApp {
 
 	public static void main(String[] args) throws Exception {
 		final RetryPolicy retryPolicy = new ExponentialBackoffRetry(baseSleepTimeMs, maxRetries);
-		CuratorFramework client = CuratorFrameworkFactory.newClient(connectString, retryPolicy);
+		final CuratorFramework client = CuratorFrameworkFactory.newClient(connectString, retryPolicy);
 
 		client.start();
 
