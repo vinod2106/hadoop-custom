@@ -19,7 +19,7 @@ public class ZooApp {
 	private final static int maxRetries = 3;
 	private final static int baseSleepTimeMs = 1000;
 	private final static String connectString = "127.0.0.1:2181";
-	private final static String configPath = "/opt/zookeeper/conf/zoo.cfg";
+	private final static String configPath = "/tmp/zookeeper";
 
 	public static void main(String[] args) throws Exception {
 		final RetryPolicy retryPolicy = new ExponentialBackoffRetry(baseSleepTimeMs, maxRetries);
