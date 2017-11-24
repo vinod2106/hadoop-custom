@@ -1,4 +1,4 @@
-package com.shavinod.kafka.stream;
+package com.shavinod.kafka.example;
 
 import com.typesafe.config.Config;
 
