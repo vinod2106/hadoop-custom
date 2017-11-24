@@ -24,7 +24,7 @@ public class Producer {
 
 		try {
 
-			for (int i = 0; i < 100000; i++) {
+			for (int i = 0; i < 10000; i++) {
 
 				// send messages to the producer
 				producer.send(new ProducerRecord<String, String>("fast-messages",
@@ -33,7 +33,7 @@ public class Producer {
 				producer.send(new ProducerRecord<String, String>("summary-markers",
 						String.format("{\"type\":\"other\", \"t\":%.3f, \"k\":%d}", System.nanoTime() * 1e-9, i)));
 				producer.flush();
-				System.out.println("Sent msg number " + i);
+				System.out.println("Sent msg number : " + i + "  | Producer :" + producer.toString());
 
 			}
 
