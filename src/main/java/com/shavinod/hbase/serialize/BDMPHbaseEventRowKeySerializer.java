@@ -18,6 +18,7 @@ import org.slf4j.LoggerFactory;
 import com.google.common.base.Charsets;
 import com.google.common.collect.Lists;
 
+
 public class BDMPHbaseEventRowKeySerializer implements HbaseEventSerializer {
     private static final Logger logger = LoggerFactory.getLogger(RegexHbaseEventRowKeySerializer.class);
 
