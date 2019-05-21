@@ -116,7 +116,7 @@ public class RegexHbaseEventRowKeySerializer implements HbaseEventSerializer {
         Put put = new Put(matcher.group(rowKeyIndex + 1).getBytes(Charsets.UTF_8));
         for (int i = 0; i < colNames.size(); i++) {
             if(i != rowKeyIndex) {
-                put.add(columnFamily, colNames.get(i), matcher.group(i + 1).getBytes(Charsets.UTF_8));
+                put.addImmutable(columnFamily, colNames.get(i), matcher.group(i + 1).getBytes(Charsets.UTF_8));
                 }
         }
         actions.add(put);

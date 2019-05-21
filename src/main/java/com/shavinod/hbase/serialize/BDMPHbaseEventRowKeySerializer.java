@@ -88,7 +88,7 @@ public class BDMPHbaseEventRowKeySerializer implements HbaseEventSerializer {
         }
 
         Put put = new Put((matcher.group(1)+"-"+matcher.group(2)).getBytes(Charsets.UTF_8));
-        put.add(columnFamily, "payld".getBytes(Charsets.UTF_8), matcher.group(3).getBytes(Charsets.UTF_8));
+        put.addImmutable(columnFamily, "payld".getBytes(Charsets.UTF_8), matcher.group(3).getBytes(Charsets.UTF_8));
 
         actions.add(put);
         logger.info("actions : " + actions.toString());

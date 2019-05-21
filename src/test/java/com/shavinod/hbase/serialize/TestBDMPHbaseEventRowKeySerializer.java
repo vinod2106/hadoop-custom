@@ -41,6 +41,6 @@ public class TestBDMPHbaseEventRowKeySerializer {
     }
 
     private String getCol(Put put, String col) {
-        return Bytes.toString(put.get(COL_FAM, col.getBytes()).get(0).getValue());
+        return Bytes.toString(put.get(COL_FAM, col.getBytes()).get(0).getValueArray());
     }
 }
