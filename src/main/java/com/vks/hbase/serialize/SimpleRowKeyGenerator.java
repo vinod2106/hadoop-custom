@@ -1,4 +1,4 @@
-package com.shavinod.hbase.serialize;
+package com.vks.hbase.serialize;
 import java.io.UnsupportedEncodingException;
 import java.util.Random;
 import java.util.UUID;

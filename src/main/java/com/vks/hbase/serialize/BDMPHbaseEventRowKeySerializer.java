@@ -1,4 +1,4 @@
-package com.shavinod.hbase.serialize;
+package com.vks.hbase.serialize;
 
 import java.util.List;
 import java.util.regex.Matcher;

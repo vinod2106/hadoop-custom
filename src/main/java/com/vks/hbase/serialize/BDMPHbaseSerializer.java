@@ -1,4 +1,4 @@
-package com.shavinod.hbase.serialize;
+package com.vks.hbase.serialize;
 import java.util.LinkedList;
 import java.util.List;
 
